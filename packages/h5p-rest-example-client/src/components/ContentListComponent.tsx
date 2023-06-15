@@ -75,13 +75,14 @@ export default class ContentList extends React.Component<{
             contentList: [
                 {
                     contentId: 'new',
-                    mainLibrary: undefined,
+                    mainLibrary: 'H5P.GreetingCard',
                     title: 'New H5P',
                     originalNewKey: `new-${this.newCounter++}`
                 },
                 ...this.state.contentList
             ]
         });
+        console.log(this.state.contentList);
     }
 
     protected onDiscard(content) {

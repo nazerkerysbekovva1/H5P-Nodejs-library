@@ -116,7 +116,7 @@ export default class ContentListEntryComponent extends React.Component<{
                                     close player
                                 </Button>
                             </Col>
-                        ) : undefined}
+                        ) : <Col>state.playing ???!!!!</Col>}
                         {this.state.playing &&
                         this.h5pPlayer.current?.hasCopyrightInformation() ? (
                             <Col className="p-2" lg="auto">
@@ -148,7 +148,7 @@ export default class ContentListEntryComponent extends React.Component<{
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </Col>
-                        ) : undefined}
+                        ) : <Col>state.playing player current ???!!!!</Col>}
                         {this.state.editing ? (
                             <Col className="p-2" lg="auto">
                                 <Overlay
@@ -193,7 +193,7 @@ export default class ContentListEntryComponent extends React.Component<{
                                     ) : undefined}
                                 </Button>
                             </Col>
-                        ) : undefined}
+                        ) : <Col>state.editing ???!!!!</Col>}
                         {this.state.editing && !this.isNew() ? (
                             <Col className="p-2" lg="auto">
                                 <Button

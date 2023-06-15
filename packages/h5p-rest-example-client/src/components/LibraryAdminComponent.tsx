@@ -88,6 +88,7 @@ export default class LibraryAdmin extends React.Component<
     }
 
     protected async fileSelected(files: FileList | null): Promise<void> {
+            console.log(files);
         if (!files || !files[0]) {
             return;
         }

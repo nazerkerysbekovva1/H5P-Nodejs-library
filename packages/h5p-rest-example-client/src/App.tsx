@@ -3,6 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 
 import ContentListComponent from './components/ContentListComponent';
+import LibraryAdmin from './components/LibraryAdminComponent';
+import ContentTypeCacheComponent from './components/ContentTypeCacheComponent';
+
 import { ContentService } from './services/ContentService';
 import Login from './components/Login';
 
@@ -33,9 +36,16 @@ export default class App extends React.Component {
                         This demo is for debugging and demonstration purposes
                         only and not suitable for production use!
                     </Alert>
+                    
                     <ContentListComponent
                         contentService={this.contentService}
                     ></ContentListComponent>
+                    
+                    <LibraryAdmin
+                        endpointUrl={'h5p/libraries'}
+                    ></LibraryAdmin>
+
+                    <ContentTypeCacheComponent/>
                 </Container>
             </div>
         );
